@@ -49,8 +49,8 @@
 }
 
 .home-btn:hover {
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 1px solid red;
+  color: red;
   background-color: transparent;
 }
 

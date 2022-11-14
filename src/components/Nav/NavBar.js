@@ -7,6 +7,7 @@ import {
   IconButton,
   Text,
 } from "@chakra-ui/react";
+
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 // import NextLink from "next/link";
 import { animateScroll as scroll } from "react-scroll";
@@ -16,10 +17,10 @@ const DarkModeSwitch = () => {
   const isDark = colorMode === "dark";
   const [display, changeDisplay] = useState("none");
   return (
-    <Flex>
+    <Flex zIndex={20} position="fixed" align="center">
       <Flex position="fixed" top="1rem" left="1rem" align="center">
         <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%" onClick={() => scroll.scrollToTop()}>
-          Nidhish
+         
         </Button>
       </Flex>
       <Flex position="fixed" top="1rem" right="1rem" align="center">
@@ -34,7 +35,12 @@ const DarkModeSwitch = () => {
 
           {/* <NextLink href="/about" passHref> */}
           <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
-            About
+            Services
+          </Button>
+          {/* </NextLink> */}
+          {/* <NextLink href="/about" passHref> */}
+          <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
+            Portfolio
           </Button>
           {/* </NextLink> */}
 
@@ -49,6 +55,7 @@ const DarkModeSwitch = () => {
         <IconButton
           aria-label="Open Menu"
           size="lg"
+          variant="ghost"
           mr={2}
           icon={<HamburgerIcon />}
           onClick={() => changeDisplay("flex")}
@@ -61,12 +68,13 @@ const DarkModeSwitch = () => {
       <Flex
         w="100vw"
         display={display}
-        bgColor="gray.50"
+        bg={"blackAlpha.800"}
         zIndex={20}
-        h="100vh"
+        
         pos="fixed"
         top="0"
         left="0"
+        
         overflowY="auto"
         flexDir="column"
       >
@@ -90,7 +98,12 @@ const DarkModeSwitch = () => {
 
           {/* <NextLink href="/about" passHref> */}
           <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
-            About
+            Services
+          </Button>
+          {/* </NextLink> */}
+          {/* <NextLink href="/about" passHref> */}
+          <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
+            Portfolio
           </Button>
           {/* </NextLink> */}
 

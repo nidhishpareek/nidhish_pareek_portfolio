@@ -12,11 +12,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons/faExternalLinkSquareAlt";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons/faGithubSquare";
 import { faUserLock } from "@fortawesome/free-solid-svg-icons/faUserLock";
-
+import Aos from "aos";
 const Portfolio = ({ projects }) => {
   return (
-    <section
-      data-aos="fade-left"
+    <section 
+      // data-aos="fade-left"
       className="portfolio"
       name="portfolio"
       id="portfolio"
