@@ -21,7 +21,7 @@ const Portfolio = ({ projects }) => {
       name="portfolio"
       id="portfolio"
     >
-      <Heading text="Portfolio" style={{ padding: "3rem" }} />
+      <Heading text="Portfolio" style={{ marginBlock: "3rem" }} />
       <div className="row">
         {projects.map((item, index) => (
           <div className="column" key={index}>

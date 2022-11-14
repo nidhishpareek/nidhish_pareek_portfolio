@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import React, { useEffect, useState } from "react";
 import ServicesData from "./ServicesData";
 import PortfolioData from "./PortfolioData";
@@ -9,9 +9,10 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
 import Services from "./components/Services/Services";
 import { Menu } from "./components/Menu/Menu";
-
+import { ChakraProvider } from "@chakra-ui/react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import DarkModeSwitch from "./components/Nav/NavBar";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -21,13 +22,15 @@ function App() {
 
   return (
     <div className="App">
-      <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Home />
-      <Services services={ServicesData} />
-      <Portfolio projects={PortfolioData} />
-      <Contact />
-
+      <ChakraProvider>
+        {/* <Nav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
+        <DarkModeSwitch></DarkModeSwitch>
+        <Home />
+        <Services services={ServicesData} />
+        <Portfolio projects={PortfolioData} />
+        <Contact />
+      </ChakraProvider>
     </div>
   );
 }

@@ -20,7 +20,7 @@ export const Menu = ({ menuOpen, setMenuOpen }) => {
         />
         <NavLink
           text="Contact"
-          path="contact"
+          path="contact" 
           onClick={() => setMenuOpen(false)}
         />
       </ul>
