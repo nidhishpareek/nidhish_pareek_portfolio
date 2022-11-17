@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import "./portfolio.css";
 
 // components
-import { Heading } from "..//Heading/Heading";
+import { MyHeading } from "..//Heading/Heading";
 
 // Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,7 +21,7 @@ const Portfolio = ({ projects }) => {
       name="portfolio"
       id="portfolio"
     >
-      <Heading text="Portfolio" style={{ marginBlock: "3rem" }} />
+      <MyHeading text="Portfolio" style={{ marginBlock: "3rem" }} />
       <div className="row">
         {projects.map((item, index) => (
           <div className="column" key={index}>

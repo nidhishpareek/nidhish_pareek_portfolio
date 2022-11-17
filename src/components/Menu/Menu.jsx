@@ -9,7 +9,7 @@ export const Menu = ({ menuOpen, setMenuOpen }) => {
       <ul>
         <NavLink text="Home" path="home" onClick={() => setMenuOpen(false)} />
         <NavLink
-          text="Services"
+          text="Services" 
           path="services"
           onClick={() => setMenuOpen(false)}
         /> 

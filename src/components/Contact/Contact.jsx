@@ -10,7 +10,7 @@ import "./contact.css";
 import shakeImage from "../../images/shake.svg";
 
 // Components
-import { Heading } from "../Heading/Heading";
+import { MyHeading } from "../Heading/Heading";
 import Button from "../Button/Button";
 
 const Contact = () => {
@@ -61,7 +61,7 @@ const Contact = () => {
 
   return (
     <section className="contact" name="contact" id="contact">
-      <Heading text="Contact" style={{ marginBottom: "3rem" }} />
+      <MyHeading text="Contact" style={{ marginBottom: "3rem" }} />
       <div className="content">
         <div className="left">
           <img src={shakeImage} alt="shake hands" />
