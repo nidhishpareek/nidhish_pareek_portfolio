@@ -61,7 +61,7 @@ const Contact = () => {
 
   return (
     <section className="contact" name="contact" id="contact">
-      <MyHeading text="Contact" style={{ marginBottom: "3rem" }} />
+      <MyHeading text="Contact 📲" style={{ marginBottom: "3rem" }} />
       <div className="content">
         <div className="left">
           <img src={shakeImage} alt="shake hands" />

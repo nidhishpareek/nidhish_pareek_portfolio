@@ -9,6 +9,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import NavBar from "./components/Nav/NavBar";
 import Skills from "./components/Skills/skills";
 import SkillData from "./SkillsData";
+import AboutMe from "./components/AboutMe/aboutme";
 
 
 function App() {
@@ -16,8 +17,8 @@ function App() {
     <div className="App">
       <ChakraProvider>
         <NavBar></NavBar>
-
         <Home />
+        <AboutMe />
         <Skills skills={SkillData} />
         <Services services={ServicesData} />
         <Portfolio projects={PortfolioData} />
