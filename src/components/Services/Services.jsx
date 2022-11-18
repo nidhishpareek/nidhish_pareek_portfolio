@@ -1,5 +1,6 @@
 import React from "react";
 
+
 // Styles
 import "./services.css";
 
@@ -7,11 +8,13 @@ import "./services.css";
 import { ServicesCard } from "./ServicesCard/ServicesCard";
 import { MyHeading } from "../Heading/Heading";
 
-const Services = ({ services }) => (
+const Services = ({ services }) => {
+
+
+  return(
   <section
-    // data-aos="fade-right"
     className="services-container"
-    name="services"
+    name="services" 
     id="services"
   > 
     <MyHeading text="Services 🛎️" />
@@ -26,6 +29,6 @@ const Services = ({ services }) => (
         ))}
     </div>
   </section>
-);
+);}
 
 export default Services;

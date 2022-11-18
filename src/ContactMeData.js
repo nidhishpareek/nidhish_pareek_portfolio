@@ -1,0 +1,28 @@
+import GITHUB from './images/contactSVG/GITHUB.svg'
+import LINKEDIN from './images/contactSVG/LINKEDIN.svg'
+import GMAIL from './images/contactSVG/GMAIL.svg'
+const LEETCODE = 
+"data:image/png;base64,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"
+
+export const ContactData = [
+    {
+        name:'GitHub',
+        link:'https://github.com/nidhishpareek/',
+        logo:GITHUB,
+    },
+    {
+        name:'Gmail',
+        link:'mailto:pareek.np1@gmail.com',
+        logo:GMAIL,
+    },
+    {
+        name:'LinkedIn',
+        link:'https://www.linkedin.com/in/nidhishpareek/',
+        logo: LINKEDIN,
+    },
+    {
+        name:'Leetcode',
+        link:'https://leetcode.com/NidhishPareek/',
+        logo:LEETCODE,
+    },
+]

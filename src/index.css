@@ -2,19 +2,25 @@
   --primary-color: rgba(0, 0, 0, 0.774);
 
 }
-
+html, body {
+  scroll-behavior: smooth;
+   scroll-snap-type: y; 
+} 
+/* @media (max-width: 800px) { */
+ html, body {
+  overflow-x: clip;
+  }
+/* } */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   width: 100%;
   background: white;
   background-repeat: no-repeat;
   height: 100vh;
-  /* max-width: 1200px; */
   margin: 0 auto;
   font-family: "Nunito", sans-serif;
 }

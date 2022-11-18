@@ -13,18 +13,26 @@ import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons/faExt
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons/faGithubSquare";
 import { faUserLock } from "@fortawesome/free-solid-svg-icons/faUserLock";
 import Aos from "aos";
+import "aos/dist/aos.css";
+
 const Portfolio = ({ projects }) => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
   return (
-    <section 
-      // data-aos="fade-left"
+    <section
       className="portfolio"
       name="portfolio"
       id="portfolio"
+      
     >
-      <MyHeading text="Portfolio 💼 " style={{ marginBlock: "3rem" }} />
-      <div className="row">
+    <div>
+      <MyHeading text="Portfolio 💼 "   style={{ marginBlock: "3rem" }} /></div>
+      <div className="row" >
         {projects.map((item, index) => (
-          <div className="column" key={index}>
+          <div className="column" key={index} data-aos={index%2 ==0?"fade-right":'fade-left'}>
             <img src={item.image} alt={item.title} />
             <div className="overlay">
               <div className="left">

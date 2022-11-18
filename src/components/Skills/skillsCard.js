@@ -1,7 +1,17 @@
 import { Flex, Image, Text } from "@chakra-ui/react"
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
-const SkillCard = ({imageURL, skillName})=>{
+const SkillCard = ({imageURL, skillName, animation, })=>{
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
     return (<Flex
+    data-aos={animation}
+    
     flexDirection={"column"}
     cursor='pointer'
     alignItems="center"
