@@ -39,7 +39,7 @@ const AboutMe = () => {
             <Text fontWeight={"bold"} as="span">
               Achieving Possimpable{" "}
             </Text>
-            which means achieving the threshold where possible & impossible meets.
+              which means achieving the threshold where possible & impossible meet.
           </Text>
           {AboutMeContent &&
             AboutMeContent?.map((content, index) => (
