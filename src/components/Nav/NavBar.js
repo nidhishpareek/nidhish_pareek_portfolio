@@ -11,11 +11,10 @@ import {
   Box,
   Image,
 } from "@chakra-ui/react";
-
+import {resume_link} from "../../ResumeLink"
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { animateScroll as scroll, Link } from "react-scroll";
 import NavTag from "./NavTag";
-import { resume_link } from "../../ResumeLink";
 
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -65,12 +64,10 @@ const NavBar = () => {
           <a href={resume_link}>
             <Button
               variant="ghost"
-              // style={{background:'rgb(229,62,62)', border:'2px solid rgb(229,62,62)', color:'white',}}
               aria-label="services"
-              // colorScheme={'red'}
               my={5}
               mx="2"
-              mr="20px"
+              mr="25px"
               style={{
                 background: "transparent",
                 border: "2px solid red",
@@ -106,13 +103,11 @@ const NavBar = () => {
           display={["flex", "flex", "none", "none"]}
         >
           <Button
-            ////as="a"
-
             padding={0}
             variant="ghost"
             aria-label="Home"
-            my={5}
             margin="0"
+            my={'5px'}
             zIndex={30}
             w="100%"
             onClick={() => scroll.scrollToTop()}
