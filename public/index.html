@@ -51,10 +51,23 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      .preloader{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 90vh;
+        justify-content: center;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root" >
+      <div class="preloader" >
+      <img loading="eager" src="Double Ring-0.4s-137px.svg" alt=""></div>
+
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

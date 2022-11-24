@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
 import Services from "./components/Services/Services";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import NavBar from "./components/Nav/NavBar";
 import Skills from "./components/Skills/skills";
 import SkillData from "./SkillsData";
@@ -16,13 +16,14 @@ function App() {
   return (
     <div className="App">
       <ChakraProvider>
-        <NavBar></NavBar>
+        <Box><NavBar></NavBar></Box>
+        <div className='smallerApp' >
         <Home />
         <AboutMe />
         <Skills skills={SkillData} />
         <Services services={ServicesData} />
         <Portfolio projects={PortfolioData} />
-        <Contact />
+        <Contact /></div>
       </ChakraProvider>
     </div>
   );

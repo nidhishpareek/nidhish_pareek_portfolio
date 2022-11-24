@@ -83,20 +83,37 @@ const Contact = () => {
     <section className="contact" name="contact" id="contact">
       <MyHeading text="Contact 📲" style={{ marginBottom: "3rem" }} />
 
-      <Flex alignItems={'center'} gap='30px' mb={'60px'} flexWrap='wrap' justifyContent={'center'}>
-      {
-        ContactData && ContactData?.map((element,index)=>{
-          return (<ContactLink key={index} link={element.link} name={element.name} logo={element.logo} />)
-        })
-      } 
+      <Flex
+        alignItems={"center"}
+        gap="30px"
+        mb={"100px"}
+        flexWrap="wrap"
+        justifyContent={"center"}
+      >
+        {ContactData &&
+          ContactData?.map((element, index) => {
+            return (
+              <ContactLink
+                key={index}
+                link={element.link}
+                name={element.name}
+                logo={element.logo}
+              />
+            );
+          })}
       </Flex>
 
       <div className="content">
         <div className="left">
           <img src={shakeImage} alt="shake hands" />
         </div>
-        <div className="right"  data-aos={"fade-up"} >
-          <form onSubmit={handleSubmit} ref={form} border='1px solid red' >
+        <div
+          className="right"
+          data-aos="fade-up"
+          // data-aos-anchor-placement="bottom-center"
+          data-aos-duration="3000"
+        >
+          <form onSubmit={handleSubmit} ref={form}  >
             <input
               name="email"
               type="email"
@@ -122,7 +139,7 @@ const Contact = () => {
             <Button
               text={loading ? "Sending..." : "Send"}
               loading={loading}
-              type="submit"
+              type="submit" 
             />
             {notification && (
               <span style={{ color: "green", marginTop: "1rem" }}>
@@ -137,4 +154,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

@@ -21,13 +21,13 @@ const NavBar = () => {
   const isDark = colorMode === "dark";
   const [display, changeDisplay] = useState("none");
   return (
-    <Box bg={isDark ? "rgb(26,32,44)" : "white"}>
-      <Flex zIndex={20} position="fixed" align="center">
+
+      <Flex zIndex={20} background={isDark? 'rgb(26,32,44)' : "white"} borderBottom={isDark? '1px solid black ':'1px solid #dee3de'} top='0px' width={'100vw'} position="fixed" height='100px' align="center" >
         {/* Desktop */}
         <Flex
           position="fixed"
           left="1rem"
-          top={"1rem"}
+
           align="center"
           display={["none", "none", "flex", "flex"]}
         >
@@ -42,19 +42,19 @@ const NavBar = () => {
             {/* Nidhish */}
             <Image
               src={isDark ? NidhishDarkLogo : NidhishLightLogo}
-              height="50px"
+              height="70px"
             ></Image>
           </Button>
         </Flex>
 
 
-        <Flex position="fixed" top="1rem" right="1rem" align="center">
+        <Flex position="fixed" right="1rem" align="center">
           <Flex display={["none", "none", "flex", "flex"]}>
 
             <NavTag to='home' name='Home' />
             <NavTag to='aboutme' name='About' />
             <NavTag to='services' name='Services' />
-            <NavTag to='portfolio' name='Portfoliio' />
+            <NavTag to='portfolio' name='Portfolio' />
             <NavTag to='contact' name='Contact' />
 
           </Flex>
@@ -74,7 +74,8 @@ const NavBar = () => {
 
         {/* Mobile Content */}
         {/* Logo */}
-        <Flex
+       <Flex align={'center'}>
+       <Flex
           position="fixed"
           left="1rem"
           top={0}
@@ -92,7 +93,7 @@ const NavBar = () => {
             w="100%"
             onClick={() => scroll.scrollToTop()}
           >
-            <Image src={isDark?NidhishDarkLogo: NidhishLightLogo} height="30px"></Image>
+            <Image src={isDark?NidhishDarkLogo: NidhishLightLogo} height="50px"></Image>
           </Button>
         </Flex>
 
@@ -104,7 +105,7 @@ const NavBar = () => {
           zIndex={20}
           
           pos="fixed"
-          top="0"
+          top="2px"
           left="0"
           overflowY="auto"
           flexDir="column"
@@ -135,12 +136,12 @@ const NavBar = () => {
             <NavTag to='home' name='Home' onClick={() => changeDisplay("none")} />
             <NavTag to='aboutme' name='About'  onClick={() => changeDisplay("none")} />
             <NavTag to='services' name='Services'  onClick={() => changeDisplay("none")} />
-            <NavTag to='portfolio' name='Portfoliio'  onClick={() => changeDisplay("none")} />
+            <NavTag to='portfolio' name='Portfolio'  onClick={() => changeDisplay("none")} />
             <NavTag to='contact' name='Contact' onClick={() => changeDisplay("none")} />
           
         </Flex>
+       </Flex>
       </Flex>
-    </Box>
   );
 };
 export default NavBar;
