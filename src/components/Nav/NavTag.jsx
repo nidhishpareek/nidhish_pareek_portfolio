@@ -9,6 +9,11 @@ const NavTag = ({ to, name }) => {
         aria-label="services"
         my={5}
         w="100%"
+        _hover={{
+                background: "transparent",
+                // border: "1px solid red",
+                color: "red",
+              }}
       >
         {name}
       </Button>
