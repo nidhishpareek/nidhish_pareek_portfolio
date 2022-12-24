@@ -26,7 +26,7 @@ const Portfolio = ({ projects }) => {
       
     >
     <div>
-      <MyHeading text="Portfolio 💼 "   style={{ marginBlock: "3rem" }} /></div>
+      <MyHeading text="Projects 📌 "   style={{ marginBlock: "3rem" }} /></div>
       <div className="row" >
         {projects.map((item, index) => (
           <PopoverElement key={index} index={index} item={item}></PopoverElement>

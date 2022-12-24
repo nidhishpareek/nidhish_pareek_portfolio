@@ -1,6 +1,9 @@
 import { useState } from "react";
-import NidhishDarkLogo from "../../images/NidhishDarkLogo1.png";
-import NidhishLightLogo from "../../images/NidhishLightLogo.png";
+// import NidhishDarkLogo from "../../images/NidhishDarkLogo1.png";
+import NidhishDarkLogo from "../../images/aj7cm-6cta1.svg";
+// import NidhishLightLogo from "../../images/NidhishLightLogo.png";
+import NidhishLightLogo from "../../images/aj7cm-6cta1.svg";
+import './switchcss.css'
 import {
   useColorMode,
   Switch,
@@ -11,7 +14,7 @@ import {
   Box,
   Image,
 } from "@chakra-ui/react";
-import {resume_link} from "../../ResumeLink"
+import { resume_link } from "../../ResumeLink";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { animateScroll as scroll, Link } from "react-scroll";
 import NavTag from "./NavTag";
@@ -49,7 +52,7 @@ const NavBar = () => {
           {/* Nidhish */}
           <Image
             src={isDark ? NidhishDarkLogo : NidhishLightLogo}
-            height="70px"
+            height="100px"
           ></Image>
         </Button>
       </Flex>
@@ -59,7 +62,7 @@ const NavBar = () => {
           <NavTag to="home" name="Home" />
           <NavTag to="aboutme" name="About" />
           <NavTag to="services" name="Services" />
-          <NavTag to="portfolio" name="Portfolio" />
+          <NavTag to="portfolio" name="Projects" />
           <NavTag to="contact" name="Contact" />
           <a href={resume_link}>
             <Button
@@ -80,16 +83,21 @@ const NavBar = () => {
         </Flex>
 
         {/* Mobile */}
+        <label class="switch">
+          <input type="checkbox" isChecked={isDark} onChange={toggleColorMode} />
+          <span class="slider"></span>
+        </label>
         <IconButton
           aria-label="Open Menu"
           size="lg"
           variant="ghost"
-          mr={2}
+          // mr={2}
           icon={<HamburgerIcon />}
           onClick={() => changeDisplay("flex")}
           display={["flex", "flex", "none", "none"]}
         />
-        <Switch color="green" isChecked={isDark} onChange={toggleColorMode} />
+        {/* <Switch color="green" isChecked={isDark} onChange={toggleColorMode} /> */}
+
       </Flex>
 
       {/* Mobile Content */}
@@ -97,7 +105,7 @@ const NavBar = () => {
       <Flex align={"center"}>
         <Flex
           position="fixed"
-          left="1rem"
+          // left=""
           top={0}
           align="center"
           display={["flex", "flex", "none", "none"]}
@@ -107,14 +115,14 @@ const NavBar = () => {
             variant="ghost"
             aria-label="Home"
             margin="0"
-            my={'5px'}
+            my={"5px"}
             zIndex={30}
             w="100%"
             onClick={() => scroll.scrollToTop()}
           >
             <Image
               src={isDark ? NidhishDarkLogo : NidhishLightLogo}
-              height="50px"
+              height="70px"
             ></Image>
           </Button>
         </Flex>
@@ -141,12 +149,6 @@ const NavBar = () => {
               icon={
                 <>
                   <CloseIcon size="lg" mr={5} />
-                  <Switch
-                    mr={2}
-                    color="green"
-                    isChecked={isDark}
-                    onChange={toggleColorMode}
-                  />
                 </>
               }
               onClick={() => changeDisplay("none")}
@@ -165,7 +167,7 @@ const NavBar = () => {
           />
           <NavTag
             to="portfolio"
-            name="Portfolio"
+            name="Projects"
             onClick={() => changeDisplay("none")}
           />
           <NavTag
